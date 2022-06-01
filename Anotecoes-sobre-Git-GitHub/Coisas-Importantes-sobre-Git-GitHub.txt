@@ -1,9 +1,80 @@
 Link para download do Git/GitHub  https://desktop.github.com
-O Git bash é um terminal extendido para otimizar o uso do Git 
+O Git bash é um terminal extendido para otimizar o uso do Git .
 
 Comandos Importantes Git/GitHub
-git status -sempre que fizer algo de novo 
 
-Git add -a 
-git commit -m "" - para dar um comentario sobre tudo que for interessante e importante
-git push origin main - para enviar o commits para a nuvem 
+git config -global user.name importante para fazer com que seus futuros projetos va para sua conta do Git/GitHub.
+
+git config -global user.email
+
+git init <Nome do repositório> - comando usado para criar um novo projeto no git.
+git clone <URL do seu Projeto> - esse comando cria uma cópia exata do seu repositório do Git/GitHub.
+
+git add - Esse comando adiciona arquivos especificados ao seu repositório, sejam arquivos novos ou arquivos antigos que foram modificados.
+
+git add -a Nome_Arquivo
+ 
+
+
+
+git status -sempre que fizer algo de novo . 
+
+git commit -m "" - para dar um comentario sobre tudo que for interessante e importante.
+>é possivel combinar as duas ações em um unico comando "git commit -a"
+
+git push origin main - para enviar o commits para a nuvem. EX git push -u <nomecurto> <nome_do_branch> é importante especificar a origem e o upstream antes de usar o git push 
+
+git push -set-upstream <nome_curto> <nome_do_branch>
+
+git branch - a grosso modo é um caminho independente de desenvolvimento, esse comando facilita o gerenciamento de tudo. Com diferentes paramentos, é possivel listar, criar ou apagar os branches
+
+git branch (lista todas as ramificações)
+
+git branch <nome_do_branch> ( cria um branch com o nome especificado)
+
+git branch -d <nome_do_branch> ( deleta o branch com o nome especificado)
+
+
+git checkout - esse comando pode ser utilizado para trocar de uma ramificação para a outra .
+
+git checkout <nome_do_branch> 
+
+é possivel combinar operações criando e fazendo o checkout de um novo branch com o um único comando git checkout -b <nome_do_branch_novo.
+
+git remote - comando remote estabelece uma conexão entre seu repositório local e um repositório remoto. EX git remote add <nomecurto> <url>.
+
+git fetch - quando precisar baixar mudanças criadas por outros membros do seu projeto colaborativo, a partir dessa comando voce ira receber todas as informações de commits para avaliar antes de aplicar essas alterações na sua versão local do repositório.
+
+git pull <url> - comando baixa o conteúdo (não os metadados) do que foi alterado no repositório remoto para o seu repositório local e imediatamente atualiza seu conteúdo para a útima versão .
+
+git stash - esse comando armazena temporariamente seus arquivos modificados em uma área chamada stash (esconderijo) sem interagir com os outros arquivos até ser necessário.
+
+git stash list
+
+quando for a hora de aplicar o conteúdo do stach a um branch usamos o parametro "apply" git stach apply. 
+
+git show <hash_do_commit> da detalhes específicos sobre um commit .
+
+git rm - para remover arquivos de sua pasta .
+
+git help - ter alguns outros comandos caso esqueça de algum .
+
+git merge <nome_do_branch> - esse comando integra mudanças de dois branches diferentes em um único brach .
+
+git rebase <base> - tem o mesmo princípio do mando git merge, porém esse comando refaz o histórico de commits tornando-o linear é indicado para consolidar múltiplos branches .
+
+git pull -rebase - esse é um variação do comando pull , a partir dele a intrução do git irá fazer um rebase (não merge) depois de se utilizar o comando pull.
+
+git cherry-pick - esse comando permite selecionar qualquer commit específico em um branch e aplicá-lo a outro branch , sem precisar de uma mescla completa.
+
+git archive - esse comando combina múltiplos arquivos em um único arquivo, como se fosse um arquivo zipado. Esse pacote pode ser aberto depois e os arquivos contidos podem ser extraídos individualmente EX "git archive -format zip HEAD > archive-HEAD.ZIP.
+
+git blame - "dedo duro" blame ajuda a determinar qual usuário realizou qual mudança em um determinado arquivo EX "git blame <nome_do_arquivo> .
+
+git tag - são uma boa opção para marcar uma branch e evitar alteração principalmente em releases públicos.
+
+git diff - comando usado para comparar dois arquivos gits ou dois branches antes de passarem por um commit ou um push, é importante executar esse comando git EX "git diff HEAD <nome_do_arquivo>  git diff <branch de origem> <branch de destino>.
+
+git citool - oferece uma alternatica gráfica ao commit 
+
+git whatchanged - oferece comandos de log mas em formato raw
