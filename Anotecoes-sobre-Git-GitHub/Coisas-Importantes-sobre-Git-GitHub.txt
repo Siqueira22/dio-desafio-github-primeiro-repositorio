@@ -1,2 +1,9 @@
 Link para download do Git/GitHub  https://desktop.github.com
 O Git bash é um terminal extendido para otimizar o uso do Git 
+
+Comandos Importantes Git/GitHub
+git status -sempre que fizer algo de novo 
+
+Git add -a 
+git commit -m "" - para dar um comentario sobre tudo que for interessante e importante
+git push origin main - para enviar o commits para a nuvem 
